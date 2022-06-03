@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class 실습문제2 {
+     //Scanner 설치
+    public static void main(String[] args){
+     Scanner scan = new Scanner(System.in); //Scanner(System,in)
+    System.out.print("2자리수 정수 입력(10~99)"); //문제 매세지
+    int ten_digit = scan.nextInt(); //10자리의 입력을 받기
+    //계산 
+     //1. 10の位を1の位に変換する
+    double exponent = (ten_digit / 10)-(ten_digit/10)/10;
+     //2. 1の位を計算する。
+    int one_digit = ten_digit % 10;
+     //3.  1と2を比較する。
+    boolean result = exponent == one_digit;
+        //조건식 몇 출력
+    if (result){
+        System.out.println("Yes! 10의 자리가 같습니다.");
+    }else 
+    System.out.println("No 10의 자리가 다릅니다.");
+    scan.close();
+
+}
+}
